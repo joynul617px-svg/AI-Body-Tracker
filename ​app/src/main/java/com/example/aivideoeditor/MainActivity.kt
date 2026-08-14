@@ -1,15 +1,10 @@
 package com.example.aivideoeditor
 
-import android.content.Context
-import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -34,6 +29,42 @@ class MainActivity : ComponentActivity() {
                             .padding(16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
+                        Text(
+                            text = "RJ Body Tracker",
+                            color = Color.Cyan,
+                            fontSize = 28.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(vertical = 16.dp)
+                        )
+                        
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(300.dp)
+                                .background(Color.DarkGray),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Video Preview & ML Kit Pose Detector",
+                                color = Color.White,
+                                fontSize = 16.sp
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(16.dp))
+
+                        Button(
+                            onClick = { /* AI Video Editing Action */ },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6200EE))
+                        ) {
+                            Text("Apply AI Filters & Track Pose", color = Color.White)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
                         // App Header with Name
                         Text(
                             text = "RJ Body Tracker",
